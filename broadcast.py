@@ -1,19 +1,67 @@
 """
-Telegram 新聞 Bot - 推播版 v4
-增強：縮網址讓長連結變一行，版面更乾淨
+台灣新聞分類按鈕版
+每個按鈕對應一個 RSS 來源
 """
 import os
 import re
 import logging
-from telegram import Bot
+from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from news_sources import fetch_all_news
 
-# 設定日誌
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
-)
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# ============================================================
+# 分類按鈕設定（名稱翻譯+對應RSS）
+# ============================================================
+CATEGORIES = {
+    "📰 頭條": {
+        "emoji": "📰",
+        "label": "頭條",
+        "source": "Yahoo 新聞",
+    },
+    "💻 科技": {
+        "emoji": "💻",
+        "label": "科技",
+        "source": "TechNews 科技",
+    },
+    "🌱 生活": {
+        "emoji": "🌱",
+        "label": "生活",
+        "source": "上下游新聞",
+    },
+    "🪙 幣圈": {
+        "emoji": "🪙",
+        "label": "幣圈",
+        "source": "區塊客",
+    },
+    "🏥 健康": {
+        "emoji": "🏥",
+        "label": "健康",
+        "source": "元氣網健康",
+    },
+    "🌍 國際": {
+        "emoji": "🌍",
+        "label": "國際",
+        "source": "BBC中文",
+    },
+}
+
+def get_category_keyboard():
+    """產生分類按鈕"""
+    keyboard = []
+    row = []
+    for i, (cat_name, info) in enumerate(CATEGORIES.items(), 1):
+        row.append(InlineKeyboardButton(cat_name, callback_data=f"cat_{info['source']}"))
+        if i % 2 == 0:
+            keyboard.append(row)
+            row = []
+    if row:
+        keyboard.append(row)
+
+    # 最後一行：全部新聞
+    keyboard.append([InlineKeyboardButton("📋 全部新聞", callback_data="cat_all")])
+    return InlineKeyboardMarkup(keyboard)
 
 
 def extract_image_from_entry(entry):
@@ -45,62 +93,101 @@ def extract_image_from_entry(entry):
     return ''
 
 
-def send_news_with_photos(bot_token, chat_id, news_list):
-    """發送新聞，有圖的新聞傳送照片，沒圖的傳文字"""
+def send_news_for_category(bot_token, chat_id, source_name, limit=5):
+    """發送指定分類的新聞"""
     bot = Bot(token=bot_token)
 
-    grouped = {}
-    for news in news_list:
-        cat = news.get('category', '台灣')
-        if cat not in grouped:
-            grouped[cat] = []
-        grouped[cat].append(news)
+    # 從 news_sources 取得特定來源的新聞
+    from news_sources import NEWS_SOURCES, fetch_news
+    source_info = NEWS_SOURCES.get(source_name)
+    if not source_info:
+        bot.send_message(chat_id=chat_id, text="找不到這個分類")
+        return
 
-    emoji_map = {'台灣': '🇹🇼', '幣圈': '🪙'}
+    news_list = fetch_news(source_name, source_info, limit=limit)
+    if not news_list:
+        bot.send_message(chat_id=chat_id, text=f"目前沒有 {source_name} 的新聞")
+        return
+
+    sent = 0
+    for news in news_list[:limit]:
+        try:
+            image_url = extract_image_from_entry(news.get('_entry', {}))
+            title = news['title']
+            link = news['link']
+            source = news['source']
+
+            if image_url:
+                text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
+                bot.send_photo(
+                    chat_id=chat_id,
+                    photo=image_url,
+                    caption=text[:1024],
+                    parse_mode='HTML',
+                    disable_web_page_preview=False
+                )
+            else:
+                text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
+                bot.send_message(
+                    chat_id=chat_id,
+                    text=text,
+                    parse_mode='HTML',
+                    disable_web_page_preview=False
+                )
+            sent += 1
+        except Exception as e:
+            logger.warning(f"發送失敗: {e}")
+
+    return sent
+
+
+def send_all_news(bot_token, chat_id, limit_per_cat=3):
+    """發送所有分類的新聞（每分類3條）"""
+    bot = Bot(token=bot_token)
+    from news_sources import NEWS_SOURCES, fetch_news
+
     total_sent = 0
-
-    for cat in ['台灣', '幣圈']:
-        if cat not in grouped:
+    for source_name, source_info in NEWS_SOURCES.items():
+        news_list = fetch_news(source_name, source_info, limit=limit_per_cat)
+        if not news_list:
             continue
 
-        icon = emoji_map.get(cat, '📌')
+        # 分類標題
+        emoji = CATEGORIES.get(f"{CATEGORIES.get(source_name, {}).get('emoji', '📌')} {source_name}", {}).get('emoji', '📌')
         try:
             bot.send_message(
                 chat_id=chat_id,
-                text=f"{icon} ====== {cat}新聞 ======",
+                text=f"{emoji} ====== {source_info.get('name', source_name)} ======",
                 parse_mode='HTML'
             )
         except:
             pass
 
-        for news in grouped[cat][:5]:
+        for news in news_list:
             try:
-                image_url = extract_image_from_entry(news.get('_entry', news))
+                image_url = extract_image_from_entry(news.get('_entry', {}))
                 title = news['title']
+                link = news['link']
                 source = news['source']
 
                 if image_url:
-                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{news['link']}\">點我看全文</a>"
+                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
                     bot.send_photo(
                         chat_id=chat_id,
                         photo=image_url,
-                        caption=text,
+                        caption=text[:1024],
                         parse_mode='HTML',
                         disable_web_page_preview=False
                     )
-                    logger.info(f"📷 [{cat}] {title[:40]}")
                 else:
-                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{news['link']}\">點我看全文</a>"
+                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
                     bot.send_message(
                         chat_id=chat_id,
                         text=text,
                         parse_mode='HTML',
                         disable_web_page_preview=False
                     )
-                    logger.info(f"📄 [{cat}] {title[:40]}")
-
                 total_sent += 1
-
             except Exception as e:
                 logger.warning(f"發送失敗: {e}")
 
@@ -117,20 +204,19 @@ def main():
         exit(1)
 
     logger.info("開始抓取新聞...")
-
     news_list = fetch_all_news(limit_per_source=5)
     logger.info(f"抓到 {len(news_list)} 條新聞")
 
     if telegram_chat_id:
         logger.info(f"推播到 Chat ID: {telegram_chat_id}")
-        sent = send_news_with_photos(bot_token, telegram_chat_id, news_list)
+        sent = send_all_news(bot_token, telegram_chat_id)
         logger.info(f"推播完成！共發送 {sent} 條")
     else:
+        # 沒有 Chat ID，印出新聞列表
+        from news_sources import clean_html
         for news in news_list:
-            img = extract_image_from_entry(news.get('_entry', news))
-            cat = news.get('category', '?')
-            print(f"[{cat}] [{'📷' if img else '📄'}] {news['source']} | {news['title'][:50]}")
-            print(f"       🔗 {news['link']}")
+            img = extract_image_from_entry(news.get('_entry', {}))
+            print(f"[{'📷' if img else '📄'}] {news['source']} | {news['title'][:50]}")
 
 
 if __name__ == "__main__":

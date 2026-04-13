@@ -28,6 +28,17 @@ NEWS_SOURCES = {
         "name": "區塊客",
         "category": "幣圈",
     },
+    # ========== 健康/國際 ==========
+    "元氣網健康": {
+        "url": "https://health.gvm.com.tw/rss",
+        "name": "元氣網",
+        "category": "健康",
+    },
+    "BBC中文": {
+        "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
+        "name": "BBC 中文",
+        "category": "國際",
+    },
 }
 
 def clean_html(text):
@@ -100,7 +111,7 @@ def format_news_message(news_list, keyword=None):
             grouped[cat] = []
         grouped[cat].append(news)
 
-    emoji_map = {"台灣": "🇹🇼", "幣圈": "🪙"}
+    emoji_map = {"台灣": "🇹🇼", "幣圈": "🪙", "健康": "🏥", "國際": "🌍"}
     for cat, news_items in grouped.items():
         icon = emoji_map.get(cat, "📌")
         message += f"{icon} {cat}新聞\n"
