@@ -39,23 +39,33 @@ def fetch_news(source_name, source_info, limit=5):
         feed = feedparser.parse(source_info["url"])
         news_list = []
         
+        # 除錯：檢查 RSS 狀態
+        if not feed.entries:
+            print(f"警告 {source_name}: 無任何項目，RSS status={feed.get('status', 'N/A')}")
+            return []
+        
         for entry in feed.entries[:limit]:
+            title = clean_html(entry.get("title", ""))
+            if not title:
+                print(f"警告 {source_name}: 有一則新聞缺少標題，已跳過")
+                continue
             news = {
-                "title": clean_html(entry.get("title", "無標題")),
+                "title": title,
                 "link": entry.get("link", ""),
                 "source": source_name,
                 "published": entry.get("published", ""),
             }
             # 嘗試取得摘要
-            if hasattr(entry, 'summary'):
+            if hasattr(entry, 'summary') and entry.summary:
                 news["summary"] = clean_html(entry.summary)[:100] + "..."
-            elif hasattr(entry, 'description'):
+            elif hasattr(entry, 'description') and entry.description:
                 news["summary"] = clean_html(entry.description)[:100] + "..."
             else:
                 news["summary"] = ""
                 
             news_list.append(news)
         
+        print(f"成功 {source_name}: 抓到 {len(news_list)} 條新聞")
         return news_list
     except Exception as e:
         print(f"抓取 {source_name} 失敗: {e}")
