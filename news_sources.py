@@ -39,7 +39,7 @@ NEWS_SOURCES = {
         "category": "幣圈",
     },
     "區塊客": {
-        "url": "https://blockcast.it/rss",
+        "url": "https://blockcast.it/feed/",
         "name": "區塊客",
         "category": "幣圈",
     },
