@@ -46,6 +46,7 @@ def fetch_news(source_name, source_info, limit=5):
                 "link": entry.get("link", ""),
                 "source": source_name,
                 "published": entry.get("published", ""),
+                "_entry": entry,  # 保留原始 entry 給 broadcast.py 取圖片用
             }
             # 嘗試取得摘要
             if hasattr(entry, 'summary') and entry.summary:
