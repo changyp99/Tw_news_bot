@@ -1,12 +1,13 @@
 """
-Telegram 新聞 Bot - 推播版 v3
-增強：台灣新聞 + 幣圈新聞，有圖用 sendPhoto
+Telegram 新聞 Bot - 推播版 v4
+增強：縮網址讓長連結變一行，版面更乾淨
 """
 import os
 import re
 import logging
+import requests
 from telegram import Bot
-from news_sources import fetch_all_news, NEWS_SOURCES
+from news_sources import fetch_all_news
 
 # 設定日誌
 logging.basicConfig(
@@ -15,10 +16,37 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# 縮網址快取
+_url_cache = {}
+
+def shorten_url(long_url):
+    """用 TinyURL 縮短網址（同一 URL 不重複請求）"""
+    if long_url in _url_cache:
+        return _url_cache[long_url]
+
+    # 已經很短的不用縮
+    if len(long_url) <= 40:
+        _url_cache[long_url] = long_url
+        return long_url
+
+    try:
+        r = requests.get(
+            f"https://tinyurl.com/api-create.php?url={long_url}",
+            timeout=5
+        )
+        short = r.text.strip()
+        if short.startswith("http"):
+            _url_cache[long_url] = short
+            return short
+    except:
+        pass
+
+    _url_cache[long_url] = long_url
+    return long_url
+
 
 def extract_image_from_entry(entry):
     """從 RSS 條目中提取圖片網址"""
-    # 1. enclosures
     if hasattr(entry, 'enclosures') and entry.enclosures:
         for enc in entry.enclosures:
             if enc.get('type', '').startswith('image/'):
@@ -26,17 +54,14 @@ def extract_image_from_entry(entry):
                 if href:
                     return href
 
-    # 2. media_thumbnail
     if hasattr(entry, 'media_thumbnail') and entry.media_thumbnail:
         return entry.media_thumbnail[0].get('url', '')
 
-    # 3. media_content
     if hasattr(entry, 'media_content') and entry.media_content:
         for mc in entry.media_content:
             if mc.get('type', '').startswith('image/'):
                 return mc.get('url', '')
 
-    # 4. 從 HTML content 找 img src
     raw = str(entry.get('summary', '')) + str(entry.get('description', ''))
     for content in entry.get('content', []):
         raw += content.value if hasattr(content, 'value') else str(content)
@@ -53,7 +78,6 @@ def send_news_with_photos(bot_token, chat_id, news_list):
     """發送新聞，有圖的新聞傳送照片，沒圖的傳文字"""
     bot = Bot(token=bot_token)
 
-    # 按類別分組
     grouped = {}
     for news in news_list:
         cat = news.get('category', '台灣')
@@ -64,11 +88,10 @@ def send_news_with_photos(bot_token, chat_id, news_list):
     emoji_map = {'台灣': '🇹🇼', '幣圈': '🪙'}
     total_sent = 0
 
-    for cat in ['台灣', '幣圈']:  # 先台灣後幣圈
+    for cat in ['台灣', '幣圈']:
         if cat not in grouped:
             continue
 
-        # 發送分類標題
         icon = emoji_map.get(cat, '📌')
         try:
             bot.send_message(
@@ -79,11 +102,11 @@ def send_news_with_photos(bot_token, chat_id, news_list):
         except:
             pass
 
-        for news in grouped[cat][:5]:  # 每類最多5條
+        for news in grouped[cat][:5]:
             try:
                 image_url = extract_image_from_entry(news.get('_entry', news))
                 title = news['title']
-                link = news['link']
+                link = shorten_url(news['link'])
                 source = news['source']
 
                 if image_url:
@@ -91,7 +114,7 @@ def send_news_with_photos(bot_token, chat_id, news_list):
                     bot.send_photo(
                         chat_id=chat_id,
                         photo=image_url,
-                        caption=text[:1024],
+                        caption=text,
                         parse_mode='HTML'
                     )
                     logger.info(f"📷 [{cat}] {title[:40]}")
@@ -134,7 +157,9 @@ def main():
         for news in news_list:
             img = extract_image_from_entry(news.get('_entry', news))
             cat = news.get('category', '?')
+            short = shorten_url(news['link'])
             print(f"[{cat}] [{'📷' if img else '📄'}] {news['source']} | {news['title'][:50]}")
+            print(f"       🔗 {short}")
 
 
 if __name__ == "__main__":
