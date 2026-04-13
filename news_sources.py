@@ -38,6 +38,11 @@ NEWS_SOURCES = {
         "name": "Blockworks",
         "category": "幣圈",
     },
+    "區塊客": {
+        "url": "https://blockcast.it/rss",
+        "name": "區塊客",
+        "category": "幣圈",
+    },
     "CoinDesk": {
         "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
         "name": "CoinDesk",
@@ -108,7 +113,6 @@ def format_news_message(news_list, keyword=None):
     message = f"📰 台灣即時新聞 {current_time}\n"
     message += "=" * 32 + "\n\n"
 
-    # 按類別分組
     grouped = {}
     for news in news_list[:20]:
         cat = news.get("category", "台灣")
