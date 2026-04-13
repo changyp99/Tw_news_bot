@@ -22,30 +22,10 @@ NEWS_SOURCES = {
         "name": "上下游",
         "category": "台灣",
     },
-    # ========== 幣圈新聞 ==========
-    "Cointelegraph": {
-        "url": "https://cointelegraph.com/rss",
-        "name": "Cointelegraph",
-        "category": "幣圈",
-    },
-    "Decrypt": {
-        "url": "https://decrypt.co/feed",
-        "name": "Decrypt",
-        "category": "幣圈",
-    },
-    "Blockworks": {
-        "url": "https://blockworks.co/feed",
-        "name": "Blockworks",
-        "category": "幣圈",
-    },
+    # ========== 幣圈新聞（中文）==========
     "區塊客": {
         "url": "https://blockcast.it/feed/",
         "name": "區塊客",
-        "category": "幣圈",
-    },
-    "CoinDesk": {
-        "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
-        "name": "CoinDesk",
         "category": "幣圈",
     },
 }
