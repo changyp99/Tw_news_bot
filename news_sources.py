@@ -18,10 +18,6 @@ NEWS_SOURCES = {
         "url": "https://www.newsmarket.com.tw/feed/",
         "name": "上下游",
     },
-    "中央廣播電臺": {
-        "url": "https://www.rti.org.tw/rss",
-        "name": "RTI 中央廣播",
-    },
 }
 
 def clean_html(text):
