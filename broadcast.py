@@ -5,7 +5,6 @@ Telegram 新聞 Bot - 推播版 v4
 import os
 import re
 import logging
-import requests
 from telegram import Bot
 from news_sources import fetch_all_news
 
@@ -15,34 +14,6 @@ logging.basicConfig(
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
-
-# 縮網址快取
-_url_cache = {}
-
-def shorten_url(long_url):
-    """用 TinyURL 縮短網址（同一 URL 不重複請求）"""
-    if long_url in _url_cache:
-        return _url_cache[long_url]
-
-    # 已經很短的不用縮
-    if len(long_url) <= 40:
-        _url_cache[long_url] = long_url
-        return long_url
-
-    try:
-        r = requests.get(
-            f"https://tinyurl.com/api-create.php?url={long_url}",
-            timeout=5
-        )
-        short = r.text.strip()
-        if short.startswith("http"):
-            _url_cache[long_url] = short
-            return short
-    except:
-        pass
-
-    _url_cache[long_url] = long_url
-    return long_url
 
 
 def extract_image_from_entry(entry):
@@ -106,24 +77,25 @@ def send_news_with_photos(bot_token, chat_id, news_list):
             try:
                 image_url = extract_image_from_entry(news.get('_entry', news))
                 title = news['title']
-                link = shorten_url(news['link'])
                 source = news['source']
 
                 if image_url:
-                    text = f"📌 {source}\n🔹 {title}\n🔗 {link}"
+                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{news['link']}\">點我看全文</a>"
                     bot.send_photo(
                         chat_id=chat_id,
                         photo=image_url,
                         caption=text,
-                        parse_mode='HTML'
+                        parse_mode='HTML',
+                        disable_web_page_preview=False
                     )
                     logger.info(f"📷 [{cat}] {title[:40]}")
                 else:
-                    text = f"📌 {source}\n🔹 {title}\n🔗 {link}"
+                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{news['link']}\">點我看全文</a>"
                     bot.send_message(
                         chat_id=chat_id,
                         text=text,
-                        parse_mode='HTML'
+                        parse_mode='HTML',
+                        disable_web_page_preview=False
                     )
                     logger.info(f"📄 [{cat}] {title[:40]}")
 
@@ -157,9 +129,8 @@ def main():
         for news in news_list:
             img = extract_image_from_entry(news.get('_entry', news))
             cat = news.get('category', '?')
-            short = shorten_url(news['link'])
             print(f"[{cat}] [{'📷' if img else '📄'}] {news['source']} | {news['title'][:50]}")
-            print(f"       🔗 {short}")
+            print(f"       🔗 {news['link']}")
 
 
 if __name__ == "__main__":
