@@ -6,25 +6,21 @@ from datetime import datetime
 import re
 
 NEWS_SOURCES = {
-    "中央社": {
-        "url": "https://www.cna.com.tw/rss_home.aspx",
-        "name": "中央社",
-    },
-    "UDN 聯合報": {
-        "url": "https://udn.com/rssfeed/news/2",
-        "name": "聯合報",
-    },
     "Yahoo 新聞": {
         "url": "https://tw.news.yahoo.com/rss/",
         "name": "Yahoo 新聞",
     },
-    "TVBS 新聞": {
-        "url": "https://news.tvbs.com.tw/rss/news.xml",
-        "name": "TVBS",
+    "TechNews 科技": {
+        "url": "https://technews.tw/feed/",
+        "name": "科技新報",
     },
-    "東森新聞": {
-        "url": "https://news.ebc.net.tw/rss/top.xml",
-        "name": "東森",
+    "上下游新聞": {
+        "url": "https://www.newsmarket.com.tw/feed/",
+        "name": "上下游",
+    },
+    "中央廣播電臺": {
+        "url": "https://www.rti.org.tw/rss",
+        "name": "RTI 中央廣播",
     },
 }
 
