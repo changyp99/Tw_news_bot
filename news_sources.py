@@ -28,6 +28,17 @@ NEWS_SOURCES = {
         "name": "區塊客",
         "category": "幣圈",
     },
+    # ========== AI / 科技新聞 ==========
+    "iThome 科技": {
+        "url": "https://www.ithome.com.tw/rss",
+        "name": "iThome",
+        "category": "AI",
+    },
+    "Hugging Face AI": {
+        "url": "https://huggingface.co/blog/feed.xml",
+        "name": "Hugging Face",
+        "category": "AI",
+    },
     # ========== 健康/國際 ==========
     "元氣網健康": {
         "url": "https://health.gvm.com.tw/rss",
@@ -111,7 +122,7 @@ def format_news_message(news_list, keyword=None):
             grouped[cat] = []
         grouped[cat].append(news)
 
-    emoji_map = {"台灣": "🇹🇼", "幣圈": "🪙", "健康": "🏥", "國際": "🌍"}
+    emoji_map = {"台灣": "🇹🇼", "幣圈": "🪙", "健康": "🏥", "國際": "🌍", "AI": "🤖"}
     for cat, news_items in grouped.items():
         icon = emoji_map.get(cat, "📌")
         message += f"{icon} {cat}新聞\n"
