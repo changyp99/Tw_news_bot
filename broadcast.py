@@ -7,6 +7,7 @@ import re
 import logging
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from news_sources import fetch_all_news
+from sent_history import filter_new_articles, mark_as_sent
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -94,23 +95,30 @@ def extract_image_from_entry(entry):
 
 
 def send_news_for_category(bot_token, chat_id, source_name, limit=5):
-    """發送指定分類的新聞"""
+    """發送指定分類的新聞，自動去除已發送過的"""
     bot = Bot(token=bot_token)
 
     # 從 news_sources 取得特定來源的新聞
     from news_sources import NEWS_SOURCES, fetch_news
+    from sent_history import filter_new_articles, mark_as_sent
     source_info = NEWS_SOURCES.get(source_name)
     if not source_info:
         bot.send_message(chat_id=chat_id, text="找不到這個分類")
         return
 
     news_list = fetch_news(source_name, source_info, limit=limit)
-    if not news_list:
-        bot.send_message(chat_id=chat_id, text=f"目前沒有 {source_name} 的新聞")
-        return
+
+    # 去重
+    new_articles, history = filter_new_articles(news_list)
+    logger.info(f"[{source_name}] 本次新文章: {len(new_articles)} 篇")
+
+    if not new_articles:
+        bot.send_message(chat_id=chat_id, text=f"目前 {source_name} 沒有新文章")
+        return 0
 
     sent = 0
-    for news in news_list[:limit]:
+    sent_articles = []
+    for news in new_articles[:limit]:
         try:
             image_url = extract_image_from_entry(news.get('_entry', {}))
             title = news['title']
@@ -135,22 +143,48 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
                     disable_web_page_preview=False
                 )
             sent += 1
+            sent_articles.append(news)
         except Exception as e:
             logger.warning(f"發送失敗: {e}")
+
+    if sent_articles:
+        mark_as_sent(sent_articles, history)
 
     return sent
 
 
 def send_all_news(bot_token, chat_id, limit_per_cat=3):
-    """發送所有分類的新聞（每分類3條）"""
+    """發送所有分類的新聞（每分類3條），自動去除已發送過的"""
     bot = Bot(token=bot_token)
     from news_sources import NEWS_SOURCES, fetch_news
 
+    # 先抓所有新聞
+    all_news = fetch_all_news(limit_per_source=limit_per_cat * 3)
+
+    # 過濾掉已發送的文章
+    new_articles, history = filter_new_articles(all_news)
+    logger.info(f"本次新文章: {len(new_articles)} 篇（已發送過: {len(all_news) - len(new_articles)} 篇）")
+
+    if not new_articles:
+        logger.info("沒有新文章要發送")
+        return 0
+
+    # 按分類群組
+    grouped = {}
+    for news in new_articles:
+        src = news.get("source", "其他")
+        if src not in grouped:
+            grouped[src] = []
+        grouped[src].append(news)
+
     total_sent = 0
+    sent_articles = []  # 收集本次成功發送的文章
+
     for source_name, source_info in NEWS_SOURCES.items():
-        news_list = fetch_news(source_name, source_info, limit=limit_per_cat)
-        if not news_list:
+        if source_name not in grouped or not grouped[source_name]:
             continue
+
+        news_list = grouped[source_name][:limit_per_cat]
 
         # 分類標題
         emoji = CATEGORIES.get(f"{CATEGORIES.get(source_name, {}).get('emoji', '📌')} {source_name}", {}).get('emoji', '📌')
@@ -188,8 +222,13 @@ def send_all_news(bot_token, chat_id, limit_per_cat=3):
                         disable_web_page_preview=False
                     )
                 total_sent += 1
+                sent_articles.append(news)
             except Exception as e:
                 logger.warning(f"發送失敗: {e}")
+
+    # 更新已發送歷史
+    if sent_articles:
+        mark_as_sent(sent_articles, history)
 
     return total_sent
 

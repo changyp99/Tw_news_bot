@@ -2,12 +2,8 @@ name: News Bot
 
 on:
   schedule:
-    # 主要執行：每2小時（00, 02, 04, 06, 08, 10, 12, 14, 16, 18, 20, 22點）
-    - cron: '0 */2 * * *'
-    # 備援1：每2小時但落後1小時（01, 03, 05, 07, 09, 11, 13, 15, 17, 19, 21, 23點）
-    - cron: '0 1,3,5,7,9,11,13,15,17,19,21,23 * * *'
-    # 備援2：每3小時（01:30, 04:30, 07:30, 10:30, 13:30, 16:30, 19:30, 22:30）
-    - cron: '30 1,4,7,10,13,16,19,22 * * *'
+    # 每30分鐘執行一次
+    - cron: '*/30 * * * *'
   workflow_dispatch:
     # 可以手動觸發
 
@@ -18,6 +14,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # 需要 fetch history 才能讀到 sent_history.json
+          fetch-depth: 1
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,3 +32,21 @@ jobs:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python broadcast.py
+      
+      - name: Commit updated history
+        run: |
+          git config --local user.email "news-bot@github.com"
+          git config --local user.name "News Bot"
+          git add sent_history.json 2>/dev/null || echo "No history file to commit"
+          # 只有當有變更時才 commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update sent history [skip ci]" || echo "Commit failed or nothing to commit"
+          fi
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
