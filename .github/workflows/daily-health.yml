@@ -1,0 +1,34 @@
+name: News Bot Daily Health Report
+
+on:
+  schedule:
+    # 每天早上 8 點報告一次（前一天累計的狀況）
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # 可手動觸發
+
+jobs:
+  daily-health:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run daily health report
+        run: python self_healer.py --daily
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

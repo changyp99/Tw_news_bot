@@ -2,3 +2,7 @@ __pycache__/
 *.zip
 venv/
 .venv/
+logs/
+health_*.json
+__pycache__/
+*.pyc
