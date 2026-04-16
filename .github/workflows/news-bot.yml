@@ -1,4 +1,4 @@
-name: News Bot
+name: News Bot (with Health Monitor)
 
 on:
   schedule:
@@ -15,7 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # 需要 fetch history 才能讀到 sent_history.json
           fetch-depth: 1
       
       - name: Set up Python
@@ -27,22 +26,31 @@ jobs:
         run: |
           pip install -r requirements.txt
       
-      - name: Run news bot
+      - name: Run news bot (broadcast)
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python broadcast.py
+      
+      - name: Quick health check (light)
+        run: |
+          python self_healer.py --light || echo "Health check failed"
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Commit updated history
         run: |
           git config --local user.email "news-bot@github.com"
           git config --local user.name "News Bot"
-          git add sent_history.json 2>/dev/null || echo "No history file to commit"
-          # 只有當有變更時才 commit
+          git add sent_history.json 2>/dev/null || echo "No history to commit"
+          git add logs/ health_*.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update sent history [skip ci]" || echo "Commit failed or nothing to commit"
+            git commit -m "Update history and logs [skip ci]" || echo "Nothing to commit"
           fi
       
       - name: Push changes
