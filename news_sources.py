@@ -28,15 +28,10 @@ NEWS_SOURCES = {
         "name": "區塊客",
         "category": "幣圈",
     },
-    # ========== AI / 科技新聞 ==========
+    # ========== AI / 科技新聞（中文）==========
     "iThome 科技": {
         "url": "https://www.ithome.com.tw/rss",
         "name": "iThome",
-        "category": "AI",
-    },
-    "Hugging Face AI": {
-        "url": "https://huggingface.co/blog/feed.xml",
-        "name": "Hugging Face",
         "category": "AI",
     },
     "資安快報": {

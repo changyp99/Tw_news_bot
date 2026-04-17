@@ -153,8 +153,8 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
     return sent
 
 
-def send_all_news(bot_token, chat_id, limit_per_cat=3):
-    """發送所有分類的新聞（每分類3條），自動去除已發送過的"""
+def send_all_news(bot_token, chat_id, limit_per_cat=2):
+    """發送所有分類的新聞（每分類2條），自動去除已發送過的"""
     bot = Bot(token=bot_token)
     from news_sources import NEWS_SOURCES, fetch_news
 
