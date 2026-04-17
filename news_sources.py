@@ -39,6 +39,11 @@ NEWS_SOURCES = {
         "name": "Hugging Face",
         "category": "AI",
     },
+    "資安快報": {
+        "url": "https://infosecu.technews.tw/feed/",
+        "name": "資安快報",
+        "category": "AI",
+    },
     # ========== 健康/國際 ==========
     "元氣網健康": {
         "url": "https://health.gvm.com.tw/rss",
