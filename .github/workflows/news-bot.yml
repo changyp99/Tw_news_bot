@@ -3,9 +3,12 @@ name: News Bot (with Health Monitor)
 on:
   schedule:
     # 每30分鐘執行一次
-    - cron: '*/30 * * * *'
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     # 可以手動觸發
+
+permissions:
+  contents: write
 
 jobs:
   fetch-and-send:
@@ -20,7 +23,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: "3.11"
       
       - name: Install dependencies
         run: |
@@ -58,3 +61,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+
