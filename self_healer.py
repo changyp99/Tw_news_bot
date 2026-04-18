@@ -5,7 +5,7 @@ News Bot 自主健康管理腳本
 
 使用方式：
   python self_healer.py              # 完整檢查 + 通知
-  python self_healer.py --light     # 輕量檢查（只看 workflow）
+  python self_healer.py --light     # 輕量檢查（只看 workflow，不抓 RSS）
   python self_healer.py --fix        # 只執行自動修復
   python self_healer.py --notify    # 只發通知測試
 """
@@ -33,15 +33,9 @@ SCRIPT_DIR = Path(__file__).parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
 def run_health_check():
-    """執行健康檢查"""
+    """執行完整健康檢查（包含 RSS 來源檢查）"""
     from health_monitor import run_health_check as do_check
     return do_check()
-
-def run_source_check():
-    """只檢查來源健康"""
-    from health_monitor import check_all_sources_health
-    from news_sources import NEWS_SOURCES
-    return check_all_sources_health(NEWS_SOURCES)
 
 def auto_fix(report):
     """執行自動修復"""
@@ -120,7 +114,7 @@ def daily_report():
 
 def main():
     parser = argparse.ArgumentParser(description="News Bot 自主健康管理")
-    parser.add_argument("--light", action="store_true", help="輕量檢查（只看 workflow 狀態）")
+    parser.add_argument("--light", action="store_true", help="輕量檢查（只看 workflow 狀態，不抓 RSS）")
     parser.add_argument("--fix", action="store_true", help="只執行自動修復")
     parser.add_argument("--notify", action="store_true", help="只發通知測試")
     parser.add_argument("--daily", action="store_true", help="每日深度報告模式")
@@ -139,7 +133,7 @@ def main():
         return
 
     if args.light:
-        # 輕量檢查：只看 workflow
+        # 輕量檢查：只看 workflow，不抓 RSS（避免每次30分鐘都重複抓兩次新聞）
         from health_monitor import get_recent_workflow_runs, detect_missed_runs
         runs = get_recent_workflow_runs(limit=10)
         check = detect_missed_runs(runs)
