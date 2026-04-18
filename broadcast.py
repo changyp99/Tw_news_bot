@@ -131,8 +131,7 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
                     chat_id=chat_id,
                     photo=image_url,
                     caption=text[:1024],
-                    parse_mode='HTML',
-                    disable_web_page_preview=False
+                    parse_mode='HTML'
                 )
             else:
                 text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
@@ -210,8 +209,7 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
                         chat_id=chat_id,
                         photo=image_url,
                         caption=text[:1024],
-                        parse_mode='HTML',
-                        disable_web_page_preview=False
+                        parse_mode='HTML'
                     )
                 else:
                     text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
