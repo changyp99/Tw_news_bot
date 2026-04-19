@@ -126,7 +126,7 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
             source = news['source']
 
             if image_url:
-                text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
+                text = f"📌 {source}\n🔹 {title}"
                 bot.send_photo(
                     chat_id=chat_id,
                     photo=image_url,
@@ -134,7 +134,7 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
                     parse_mode='HTML'
                 )
             else:
-                text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
+                text = f"📌 {source}\n🔹 {title}"
                 bot.send_message(
                     chat_id=chat_id,
                     text=text,
@@ -204,7 +204,7 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
                 source = news['source']
 
                 if image_url:
-                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
+                    text = f"📌 {source}\n🔹 {title}"
                     bot.send_photo(
                         chat_id=chat_id,
                         photo=image_url,
@@ -212,7 +212,7 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
                         parse_mode='HTML'
                     )
                 else:
-                    text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
+                    text = f"📌 {source}\n🔹 {title}"
                     bot.send_message(
                         chat_id=chat_id,
                         text=text,

@@ -2,8 +2,8 @@ name: News Bot (with Health Monitor)
 
 on:
   schedule:
-    # 每30分鐘執行一次
-    - cron: "*/30 * * * *"
+    # 每4小時執行一次（0, 4, 8, 12, 16, 20點）
+    - cron: "0 0,4,8,12,16,20 * * *"
   workflow_dispatch:
     # 可以手動觸發
 
