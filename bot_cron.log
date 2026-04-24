@@ -1,0 +1,483 @@
+2026-04-22 08:31:34,712 - __main__ - INFO - 啟動新聞 Bot...
+2026-04-22 08:31:34,764 - __main__ - INFO - Bot 啟動成功！
+2026-04-22 08:31:35,449 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getMe "HTTP/1.1 200 OK"
+2026-04-22 08:31:35,673 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/deleteWebhook "HTTP/1.1 200 OK"
+2026-04-22 08:31:35,674 - telegram.ext.Application - INFO - Application started
+2026-04-22 08:31:46,351 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:31:48,948 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:31:48,949 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:32:00,260 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:32:05,858 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:32:05,858 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:32:17,081 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:32:22,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:32:22,696 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:32:33,919 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:32:39,614 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:32:39,615 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:32:50,843 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:32:56,432 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:32:56,433 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:33:07,655 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:33:13,263 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:33:13,263 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:33:24,542 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:33:30,142 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:33:30,143 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:33:41,365 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:33:46,950 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:33:46,950 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:33:58,169 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:34:03,762 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:34:03,763 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:34:14,987 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:34:20,607 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:34:20,608 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:34:31,840 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:34:37,417 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:34:37,417 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:34:48,650 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:34:54,272 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:34:54,273 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:35:05,502 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:35:11,119 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:35:11,120 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:35:22,352 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:35:28,023 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:35:28,023 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:35:39,371 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:35:44,957 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:35:44,957 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:35:56,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:36:01,777 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:36:01,777 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:36:13,015 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:36:18,668 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:36:18,668 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:36:29,902 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:36:35,506 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:36:35,506 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:36:46,741 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:36:52,363 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:36:52,363 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:37:03,588 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:37:09,166 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:37:09,166 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:37:20,394 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:37:25,973 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:37:25,974 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:37:37,914 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:37:43,524 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:37:43,525 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:37:54,744 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:38:00,352 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:38:00,352 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:38:11,569 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:38:17,159 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:38:17,159 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:38:28,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:38:34,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:38:34,003 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:38:45,221 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:38:50,819 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:38:50,820 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:39:02,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:39:07,602 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:39:07,602 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:39:18,816 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:39:24,408 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:39:24,408 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:39:35,628 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:39:41,208 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:39:41,208 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:39:52,574 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:39:58,186 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:39:58,186 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:40:09,401 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:40:15,030 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:40:15,030 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:40:26,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:40:31,910 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:40:31,910 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:40:43,124 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:40:48,706 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:40:48,706 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:40:59,927 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:41:05,665 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:41:05,666 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:41:16,883 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:41:22,495 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:41:22,496 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:41:33,713 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:41:39,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:41:39,311 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:41:51,131 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:41:56,733 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:41:56,734 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:42:07,962 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:42:13,540 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:42:13,540 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:42:24,930 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:42:30,520 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:42:30,521 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:42:41,751 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:42:47,317 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:42:47,317 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:42:58,547 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:43:04,225 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:43:04,225 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:43:15,456 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:43:21,101 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:43:21,101 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:43:32,339 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:43:38,450 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:43:38,450 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:43:49,688 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:43:55,814 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:43:55,814 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:44:07,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:44:12,882 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:44:12,882 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:44:24,105 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:44:29,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:44:29,696 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:44:40,915 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:44:46,517 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:44:46,518 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:44:57,885 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:45:03,478 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:45:03,479 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:45:14,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:45:20,416 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:45:20,416 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:45:31,637 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:45:37,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:45:37,245 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:45:48,922 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:45:54,534 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:45:54,535 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:46:05,764 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:46:11,340 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:46:11,341 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:46:22,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:46:28,297 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:46:28,297 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:46:39,521 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:46:45,481 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:46:45,482 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:46:56,717 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:47:02,318 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:47:02,318 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:47:13,544 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:47:19,154 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:47:19,154 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:47:30,384 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:47:36,104 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:47:36,104 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:47:47,329 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:47:53,126 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:47:53,126 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:48:04,352 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:48:09,962 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:48:09,963 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:48:21,199 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:48:26,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:48:26,821 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:48:38,050 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:48:43,657 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:48:43,657 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:48:54,886 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:49:00,496 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:49:00,496 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:49:11,730 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:49:17,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:49:17,695 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:49:29,040 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:49:34,648 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:49:34,648 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:49:45,885 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:49:51,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:49:51,510 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:50:02,750 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:50:08,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:50:08,322 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:50:19,564 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:50:25,166 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:50:25,166 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:50:36,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:50:41,985 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:50:41,986 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:50:53,227 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:50:58,836 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:50:58,836 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:51:10,086 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:51:15,687 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:51:15,688 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:51:26,912 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:51:32,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:51:32,537 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:51:43,764 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:51:49,342 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:51:49,343 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:52:00,572 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:52:06,215 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:52:06,215 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:52:17,441 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:52:23,034 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:52:23,035 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:52:34,259 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:52:39,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:52:39,866 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:52:51,090 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:52:56,678 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:52:56,679 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:53:07,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:53:13,660 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:53:13,660 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:53:24,897 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:53:30,492 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:53:30,493 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:53:41,749 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:53:47,361 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:53:47,362 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:53:58,586 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:54:04,178 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:54:04,179 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:54:16,123 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:54:21,716 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:54:21,716 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:54:32,956 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:54:38,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:54:38,546 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:54:49,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:54:55,383 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:54:55,383 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:55:06,604 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:55:12,210 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:55:12,211 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:55:23,441 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:55:29,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:55:29,022 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:55:40,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:55:45,871 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:55:45,872 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:55:57,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:56:02,657 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:56:02,657 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:56:13,892 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:56:19,460 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:56:19,460 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:56:30,703 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:56:36,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:56:36,274 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:56:47,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:56:53,219 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:56:53,219 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:57:04,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:57:10,031 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:57:10,031 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:57:21,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:57:26,868 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:57:26,868 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:57:38,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:57:43,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:57:43,755 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:57:54,995 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:58:00,589 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:58:00,589 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:58:11,824 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:58:17,405 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:58:17,405 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:58:28,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:58:35,012 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:58:35,013 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:58:46,240 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:58:51,806 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:58:51,807 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:59:03,044 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:59:08,629 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:59:08,629 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:59:19,856 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:59:25,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:59:25,425 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:59:36,650 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:59:42,286 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:59:42,287 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 08:59:53,963 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 08:59:59,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 08:59:59,548 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:00:10,770 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:00:16,391 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:00:16,391 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:00:27,614 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:00:33,239 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:00:33,239 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:00:44,469 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:00:50,056 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:00:50,057 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:01:01,276 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:01:06,962 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:01:06,963 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:01:18,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:01:24,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:01:24,022 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:01:35,245 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:01:40,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:01:40,822 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:01:52,046 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:01:57,894 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:01:57,894 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:02:09,116 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:02:14,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:02:14,755 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:02:25,977 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:02:31,553 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:02:31,553 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:02:42,774 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:02:48,349 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:02:48,350 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:02:59,570 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:03:05,191 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:03:05,191 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:03:16,530 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:03:22,120 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:03:22,120 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:03:33,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:03:38,939 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:03:38,939 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:03:50,170 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:03:55,773 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:03:55,774 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:04:07,014 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:04:12,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:04:12,551 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:04:23,782 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:04:29,357 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:04:29,357 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:04:40,587 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:04:46,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:04:46,207 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:04:57,438 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:05:03,191 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:05:03,191 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:05:14,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:05:20,032 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:05:20,032 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:05:23,486 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:05:24,338 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:05:31,933 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:05:33,707 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:05:36,966 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:05:36,967 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:05:48,191 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:05:48,418 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:05:49,321 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:05:49,724 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:05:53,776 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:05:53,776 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:06:04,999 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:06:10,619 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:06:10,620 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:06:21,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:06:27,530 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:06:27,531 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:06:38,771 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:06:38,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:06:39,875 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:06:40,283 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:06:44,383 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:06:44,383 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:06:55,611 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:06:57,506 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:06:58,370 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:06:58,782 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:07:01,343 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:07:01,343 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:07:12,565 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:07:18,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:07:18,189 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:07:29,418 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:07:35,022 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:07:35,023 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:07:46,262 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:07:51,841 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:07:51,842 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:08:03,063 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:08:08,654 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:08:08,655 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:08:19,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:08:20,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:08:20,461 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/sendMessage "HTTP/1.1 200 OK"
+2026-04-22 09:08:25,468 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:08:25,469 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:08:36,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:08:42,274 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:08:42,274 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:08:53,496 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:08:59,071 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:08:59,072 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:09:10,297 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:09:16,027 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:09:16,027 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:09:27,246 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:09:33,012 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:09:33,013 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:09:44,238 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:09:49,820 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:09:49,820 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:10:01,051 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:10:06,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:10:06,633 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:10:17,860 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:10:23,468 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:10:23,469 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:10:34,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:10:40,489 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:10:40,489 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:10:51,715 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:10:57,278 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:10:57,279 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:11:08,506 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:11:14,095 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:11:14,096 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:11:25,323 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:11:30,962 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:11:30,962 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:11:42,264 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:11:48,126 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:11:48,127 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:11:59,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:12:04,945 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:12:04,945 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:12:16,159 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:12:21,738 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:12:21,739 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:12:32,961 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:12:38,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:12:38,545 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:12:49,760 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:12:55,396 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:12:55,397 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:13:06,683 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:13:12,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:13:12,323 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:13:23,987 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:13:29,592 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:13:29,593 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:13:40,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:13:46,587 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:13:46,587 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:13:57,829 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:14:03,436 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 409 Conflict"
+2026-04-22 09:14:03,436 - __main__ - ERROR - 更新 None 發生錯誤: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-04-22 09:14:12,172 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8664161003:AAEoR8lo9E_NZkIj9KJxHCcXgZre5aLuCwg/getUpdates "HTTP/1.1 200 OK"
+2026-04-22 09:14:12,172 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2026-04-22 09:14:12,172 - telegram.ext.Application - INFO - Application.stop() complete
+成功 Yahoo 新聞: 抓到 10 條新聞
+成功 TechNews 科技: 抓到 10 條新聞
+成功 上下游新聞: 抓到 10 條新聞
+成功 區塊客: 抓到 10 條新聞
+成功 iThome 科技: 抓到 10 條新聞
+成功 資安快報: 抓到 10 條新聞
+成功 元氣網健康: 抓到 10 條新聞
+成功 BBC中文: 抓到 10 條新聞
