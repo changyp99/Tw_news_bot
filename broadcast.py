@@ -125,22 +125,21 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
             link = news['link']
             source = news['source']
 
-            if image_url:
-                text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
-                bot.send_photo(
-                    chat_id=chat_id,
-                    photo=image_url,
-                    caption=text[:1024],
-                    parse_mode='HTML'
-                )
-            else:
-                text = f"📌 {source}\n🔹 {title}\n👉 <a href=\"{link}\">點我看全文</a>"
-                bot.send_message(
-                    chat_id=chat_id,
-                    text=text,
-                    parse_mode='HTML',
-                    disable_web_page_preview=False
-                )
+            if not image_url:
+                # 沒有圖片的新聞直接跳過，不發送
+                logger.info(f"跳過無圖片新聞: {title[:30]}...")
+                continue
+
+            text = f"📌 {source}\n🔹 {title}"
+            keyboard = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            bot.send_photo(
+                chat_id=chat_id,
+                photo=image_url,
+                caption=text[:1024],
+                parse_mode='HTML',
+                reply_markup=reply_markup
+            )
             sent += 1
             sent_articles.append(news)
         except Exception as e:
@@ -203,22 +202,21 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
                 link = news['link']
                 source = news['source']
 
-                if image_url:
-                    text = f"📌 {source}\n🔹 {title}"
-                    bot.send_photo(
-                        chat_id=chat_id,
-                        photo=image_url,
-                        caption=text[:1024],
-                        parse_mode='HTML'
-                    )
-                else:
-                    text = f"📌 {source}\n🔹 {title}"
-                    bot.send_message(
-                        chat_id=chat_id,
-                        text=text,
-                        parse_mode='HTML',
-                        disable_web_page_preview=False
-                    )
+                if not image_url:
+                    # 沒有圖片的新聞直接跳過，不發送
+                    logger.info(f"跳過無圖片新聞: {title[:30]}...")
+                    continue
+
+                text = f"📌 {source}\n🔹 {title}"
+                keyboard = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
+                reply_markup = InlineKeyboardMarkup(keyboard)
+                bot.send_photo(
+                    chat_id=chat_id,
+                    photo=image_url,
+                    caption=text[:1024],
+                    parse_mode='HTML',
+                    reply_markup=reply_markup
+                )
                 total_sent += 1
                 sent_articles.append(news)
             except Exception as e:
