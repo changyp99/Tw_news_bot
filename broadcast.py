@@ -95,30 +95,26 @@ def extract_image_from_entry(entry):
 
 
 def _send_one_news(bot, chat_id, news):
-    """發送一條新聞：有圖發 photo，沒圖發 text。連結全部變成可點擊。"""
+    """發送一條新聞：有圖發 photo，沒圖發 text。"""
     image_url = extract_image_from_entry(news.get('_entry', {}))
     title = news['title']
     link = news['link']
     source = news['source']
-    link_btn = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
-    reply_markup = InlineKeyboardMarkup(link_btn)
 
     if image_url:
-        text = f"📌 {source}\n\n🔹 {title}\n\n🔗 <a href='{link}'>點我看完整文章</a>"
+        text = f"📌 {source}\n\n🔹 {title}"
         bot.send_photo(
             chat_id=chat_id,
             photo=image_url,
             caption=text[:1024],
-            parse_mode='HTML',
-            reply_markup=reply_markup
+            parse_mode='HTML'
         )
     else:
-        text = f"📌 {source}\n\n🔹 {title}\n\n🔗 <a href='{link}'>點我看完整文章</a>"
+        text = f"📌 {source}\n\n🔹 {title}"
         bot.send_message(
             chat_id=chat_id,
             text=text[:4096],
-            parse_mode='HTML',
-            reply_markup=reply_markup
+            parse_mode='HTML'
         )
 
 
