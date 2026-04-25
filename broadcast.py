@@ -94,6 +94,34 @@ def extract_image_from_entry(entry):
     return ''
 
 
+def _send_one_news(bot, chat_id, news):
+    """發送一條新聞：有圖發 photo，沒圖發 text。連結全部變成可點擊。"""
+    image_url = extract_image_from_entry(news.get('_entry', {}))
+    title = news['title']
+    link = news['link']
+    source = news['source']
+    link_btn = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
+    reply_markup = InlineKeyboardMarkup(link_btn)
+
+    if image_url:
+        text = f"📌 {source}\n\n🔹 {title}\n\n🔗 <a href='{link}'>點我看完整文章</a>"
+        bot.send_photo(
+            chat_id=chat_id,
+            photo=image_url,
+            caption=text[:1024],
+            parse_mode='HTML',
+            reply_markup=reply_markup
+        )
+    else:
+        text = f"📌 {source}\n\n🔹 {title}\n\n🔗 <a href='{link}'>點我看完整文章</a>"
+        bot.send_message(
+            chat_id=chat_id,
+            text=text[:4096],
+            parse_mode='HTML',
+            reply_markup=reply_markup
+        )
+
+
 def send_news_for_category(bot_token, chat_id, source_name, limit=5):
     """發送指定分類的新聞，自動去除已發送過的"""
     bot = Bot(token=bot_token)
@@ -120,26 +148,7 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
     sent_articles = []
     for news in new_articles[:limit]:
         try:
-            image_url = extract_image_from_entry(news.get('_entry', {}))
-            title = news['title']
-            link = news['link']
-            source = news['source']
-
-            if not image_url:
-                # 沒有圖片的新聞直接跳過，不發送
-                logger.info(f"跳過無圖片新聞: {title[:30]}...")
-                continue
-
-            text = f"📌 {source}\n🔹 {title}"
-            keyboard = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
-            reply_markup = InlineKeyboardMarkup(keyboard)
-            bot.send_photo(
-                chat_id=chat_id,
-                photo=image_url,
-                caption=text[:1024],
-                parse_mode='HTML',
-                reply_markup=reply_markup
-            )
+            _send_one_news(bot, chat_id, news)
             sent += 1
             sent_articles.append(news)
         except Exception as e:
@@ -197,26 +206,7 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
 
         for news in news_list:
             try:
-                image_url = extract_image_from_entry(news.get('_entry', {}))
-                title = news['title']
-                link = news['link']
-                source = news['source']
-
-                if not image_url:
-                    # 沒有圖片的新聞直接跳過，不發送
-                    logger.info(f"跳過無圖片新聞: {title[:30]}...")
-                    continue
-
-                text = f"📌 {source}\n🔹 {title}"
-                keyboard = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
-                reply_markup = InlineKeyboardMarkup(keyboard)
-                bot.send_photo(
-                    chat_id=chat_id,
-                    photo=image_url,
-                    caption=text[:1024],
-                    parse_mode='HTML',
-                    reply_markup=reply_markup
-                )
+                _send_one_news(bot, chat_id, news)
                 total_sent += 1
                 sent_articles.append(news)
             except Exception as e:
