@@ -95,27 +95,21 @@ def extract_image_from_entry(entry):
 
 
 def _send_one_news(bot, chat_id, news):
-    """發送一條新聞：有圖發 photo，沒圖發 text。"""
+    """發送一條新聞：有圖發 photo，沒圖跳過不發送。回傳 True=有發送，False=跳過。"""
     image_url = extract_image_from_entry(news.get('_entry', {}))
+    if not image_url:
+        return False
     title = news['title']
-    link = news['link']
     source = news['source']
 
-    if image_url:
-        text = f"📌 {source}\n\n🔹 {title}"
-        bot.send_photo(
-            chat_id=chat_id,
-            photo=image_url,
-            caption=text[:1024],
-            parse_mode='HTML'
-        )
-    else:
-        text = f"📌 {source}\n\n🔹 {title}"
-        bot.send_message(
-            chat_id=chat_id,
-            text=text[:4096],
-            parse_mode='HTML'
-        )
+    text = f"📌 {source}\n\n🔹 {title}"
+    bot.send_photo(
+        chat_id=chat_id,
+        photo=image_url,
+        caption=text[:1024],
+        parse_mode='HTML'
+    )
+    return True
 
 
 def send_news_for_category(bot_token, chat_id, source_name, limit=5):
@@ -144,9 +138,10 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
     sent_articles = []
     for news in new_articles[:limit]:
         try:
-            _send_one_news(bot, chat_id, news)
-            sent += 1
-            sent_articles.append(news)
+            ok = _send_one_news(bot, chat_id, news)
+            if ok:
+                sent += 1
+                sent_articles.append(news)
         except Exception as e:
             logger.warning(f"發送失敗: {e}")
 
@@ -202,9 +197,10 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
 
         for news in news_list:
             try:
-                _send_one_news(bot, chat_id, news)
-                total_sent += 1
-                sent_articles.append(news)
+                ok = _send_one_news(bot, chat_id, news)
+                if ok:
+                    total_sent += 1
+                    sent_articles.append(news)
             except Exception as e:
                 logger.warning(f"發送失敗: {e}")
 
