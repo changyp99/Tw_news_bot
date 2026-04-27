@@ -6,7 +6,7 @@ import os
 import re
 import logging
 import requests
-from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
+
 from news_sources import fetch_all_news
 from sent_history import filter_new_articles, mark_as_sent
 
@@ -149,16 +149,11 @@ def _send_one_news(bot, chat_id, news):
     if not image_url:
         return False  # 無圖不發送
 
-    text = f"📌 {source}\n\n🔹 {title}"
-    link_btn = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
-    reply_markup = InlineKeyboardMarkup(link_btn)
-
+    caption=f"📌 {source}\n\n🔹 {title}\n\n🔗 {link}"
     bot.send_photo(
         chat_id=chat_id,
         photo=image_url,
-        caption=text[:1024],
-        parse_mode='HTML',
-        reply_markup=reply_markup
+        caption=caption[:1024]
     )
     return True
 
