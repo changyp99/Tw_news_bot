@@ -106,26 +106,28 @@ def _split_by_image(news_list):
 
 
 def _send_one_news(bot, chat_id, news):
-    """發送一條新聞，有圖發 photo，没圖發 text。"""
+    """發送一條新聞，有圖發 photo，並在圖片下方加原文連結。"""
     title = news['title']
     source = news['source']
+    link = news['link']
     image_url = extract_image_from_entry(news.get('_entry', {}))
 
-    if image_url:
-        text = f"📌 {source}\n\n🔹 {title}"
-        bot.send_photo(
-            chat_id=chat_id,
-            photo=image_url,
-            caption=text[:1024],
-            parse_mode='HTML'
-        )
-    else:
-        text = f"📌 {source}\n\n🔹 {title}"
-        bot.send_message(
-            chat_id=chat_id,
-            text=text[:4096],
-            parse_mode='HTML'
-        )
+    # 按用戶要求：只發有圖的新聞，圖片下方附上原文連結
+    if not image_url:
+        return False  # 無圖不發送
+
+    text = f"📌 {source}\n\n🔹 {title}"
+    link_btn = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
+    reply_markup = InlineKeyboardMarkup(link_btn)
+
+    bot.send_photo(
+        chat_id=chat_id,
+        photo=image_url,
+        caption=text[:1024],
+        parse_mode='HTML',
+        reply_markup=reply_markup
+    )
+    return True
 
 
 def send_all_news(bot_token, chat_id, limit_per_cat=2):
@@ -152,25 +154,24 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
         if not new_articles:
             continue
 
-        # 分有圖 / 無圖
+        # 按用戶要求：只發有圖的新聞，無圖不發
         has_img, no_img = _split_by_image(new_articles)
 
         if has_img:
-            # 有圖：全部發，再補無圖最多 limit_per_cat 則
-            to_send = has_img + no_img[:limit_per_cat]
+            to_send = has_img  # 只發有圖的
         else:
-            # 完全無圖：放寬抓取數量（最多20篇），直到找到有圖的
+            # 完全無圖：放寬抓取數量直到找到有圖的
             logger.info(f"[{source_name}] 沒有找到圖片新聞，主動放寬搜尋...")
             expanded = fetch_news(source_name, source_info, limit=20)
             expanded_new, _ = filter_new_articles(expanded)
-            has_img2, no_img2 = _split_by_image(expanded_new)
+            has_img2, _ = _split_by_image(expanded_new)
             if has_img2:
-                to_send = has_img2 + no_img2[:limit_per_cat]
+                to_send = has_img2
                 logger.info(f"[{source_name}] 放寬後找到 {len(has_img2)} 張圖片")
             else:
-                # 真的完全沒圖，只發1篇
-                to_send = new_articles[:1]
-                logger.warning(f"[{source_name}] 該來源完全無圖片，只發1篇純文字")
+                # 真的完全沒圖就跳過這來源，不發任何東西
+                logger.warning(f"[{source_name}] 該來源完全無圖片，跳過")
+                continue
 
         # 發送分類標題
         emoji = CATEGORIES.get(f"{CATEGORIES.get(source_name, {}).get('emoji', '📌')} {source_name}", {}).get('emoji', '📌')
@@ -185,9 +186,9 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
 
         for news in to_send:
             try:
-                _send_one_news(bot, chat_id, news)
-                total_sent += 1
-                sent_articles.append(news)
+                if _send_one_news(bot, chat_id, news):
+                    total_sent += 1
+                    sent_articles.append(news)
             except Exception as e:
                 logger.warning(f"發送失敗: {e}")
 
@@ -222,17 +223,19 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
 
     has_img, no_img = _split_by_image(new_articles)
     if has_img:
-        to_send = has_img + no_img[:limit]
+        to_send = has_img
     else:
-        to_send = new_articles[:1]
+        # 完全無圖就跳過
+        bot.send_message(chat_id=chat_id, text=f"目前 {source_name} 沒有附圖的新聞")
+        return 0
 
     sent = 0
     sent_articles = []
     for news in to_send:
         try:
-            _send_one_news(bot, chat_id, news)
-            sent += 1
-            sent_articles.append(news)
+            if _send_one_news(bot, chat_id, news):
+                sent += 1
+                sent_articles.append(news)
         except Exception as e:
             logger.warning(f"發送失敗: {e}")
 
