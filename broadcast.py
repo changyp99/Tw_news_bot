@@ -5,6 +5,7 @@
 import os
 import re
 import logging
+import requests
 from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup
 from news_sources import fetch_all_news
 from sent_history import filter_new_articles, mark_as_sent
@@ -63,6 +64,33 @@ def get_category_keyboard():
     return InlineKeyboardMarkup(keyboard)
 
 
+_OG_IMAGE_CACHE = {}
+
+def _fetch_og_image(url):
+    """嘗試從文章網頁抓取 OpenGraph 圖片（og:image），有緩存機制。"""
+    if url in _OG_IMAGE_CACHE:
+        return _OG_IMAGE_CACHE[url]
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+        }
+        resp = requests.get(url, headers=headers, timeout=5)
+        resp.raise_for_status()
+        html = resp.text
+        # 抓 og:image
+        match = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, re.IGNORECASE)
+        if not match:
+            match = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', html, re.IGNORECASE)
+        if match:
+            img_url = match.group(1).strip()
+            if img_url.startswith('http'):
+                _OG_IMAGE_CACHE[url] = img_url
+                return img_url
+    except Exception:
+        pass
+    return ''
+
+
 def extract_image_from_entry(entry):
     """從 RSS 條目中提取圖片網址"""
     if hasattr(entry, 'enclosures') and entry.enclosures:
@@ -110,7 +138,12 @@ def _send_one_news(bot, chat_id, news):
     title = news['title']
     source = news['source']
     link = news['link']
-    image_url = extract_image_from_entry(news.get('_entry', {}))
+    entry = news.get('_entry', {})
+
+    # 優先用 RSS 圖片，沒有的話用 og:image
+    image_url = extract_image_from_entry(entry)
+    if not image_url:
+        image_url = news.get('_og_image') or _fetch_og_image(link)
 
     # 按用戶要求：只發有圖的新聞，圖片下方附上原文連結
     if not image_url:
@@ -154,8 +187,15 @@ def send_all_news(bot_token, chat_id, limit_per_cat=2):
         if not new_articles:
             continue
 
-        # 按用戶要求：只發有圖的新聞，無圖不發
-        has_img, no_img = _split_by_image(new_articles)
+        # 按用戶要求：只發有圖的新聞，先對沒有 RSS 圖片的嘗試抓 og:image
+        for n in new_articles:
+            if not extract_image_from_entry(n.get('_entry', {})):
+                og = _fetch_og_image(n['link'])
+                if og:
+                    n['_og_image'] = og
+
+        has_img = [n for n in new_articles if extract_image_from_entry(n.get('_entry', {})) or n.get('_og_image')]
+        no_img = [n for n in new_articles if not (extract_image_from_entry(n.get('_entry', {})) or n.get('_og_image'))]
 
         if has_img:
             to_send = has_img  # 只發有圖的
@@ -221,7 +261,16 @@ def send_news_for_category(bot_token, chat_id, source_name, limit=5):
         bot.send_message(chat_id=chat_id, text=f"目前 {source_name} 沒有新文章")
         return 0
 
-    has_img, no_img = _split_by_image(new_articles)
+    # 先對沒有 RSS 圖片的文章嘗試抓 og:image
+    for n in new_articles:
+        if not extract_image_from_entry(n.get('_entry', {})):
+            og = _fetch_og_image(n['link'])
+            if og:
+                n['_og_image'] = og
+
+    has_img = [n for n in new_articles if extract_image_from_entry(n.get('_entry', {})) or n.get('_og_image')]
+    no_img = [n for n in new_articles if not (extract_image_from_entry(n.get('_entry', {})) or n.get('_og_image'))]
+
     if has_img:
         to_send = has_img
     else:
