@@ -7,6 +7,7 @@ import re
 import logging
 import requests
 
+from telegram import Bot
 from news_sources import fetch_all_news
 from sent_history import filter_new_articles, mark_as_sent
 
