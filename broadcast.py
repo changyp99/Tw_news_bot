@@ -134,7 +134,8 @@ def _split_by_image(news_list):
 
 
 def _send_one_news(bot, chat_id, news):
-    """發送一條新聞，有圖發 photo，並在圖片下方加原文連結。"""
+    """發送一條新聞，有圖發 photo，並在圖片下方加原文連結。
+    caption 內嵌 HTML 連結，點擊標題文字即可開啟原文。"""
     title = news['title']
     source = news['source']
     link = news['link']
@@ -145,20 +146,27 @@ def _send_one_news(bot, chat_id, news):
     if not image_url:
         image_url = news.get('_og_image') or _fetch_og_image(link)
 
-    # 按用戶要求：只發有圖的新聞，圖片下方附上原文連結
+    # 按用戶要求：只發有圖的新聞
     if not image_url:
         return False  # 無圖不發送
 
-    text = f"📌 {source}\n\n🔹 {title}"
+    # caption 內嵌 HTML 連結，點標題/來源就能開原文
+    caption_html = (
+        f'📌 <a href="{link}"><b>{source}</b></a>\n\n'
+        f'🔹 <a href="{link}">{title}</a>\n\n'
+        f'🔗 <a href="{link}">點此閱讀原文</a>'
+    )
+
+    # 圖片下方的獨立連結按鈕
     link_btn = [[InlineKeyboardButton("🔗 閱讀原文", url=link)]]
     reply_markup = InlineKeyboardMarkup(link_btn)
 
     bot.send_photo(
         chat_id=chat_id,
         photo=image_url,
-        caption=text[:1024],
+        caption=caption_html[:1024],
         parse_mode='HTML',
-        reply_markup=reply_markup
+        reply_markup=reply_markup,
     )
     return True
 
