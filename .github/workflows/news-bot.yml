@@ -13,7 +13,13 @@ permissions:
 jobs:
   fetch-and-send:
     runs-on: ubuntu-latest
-    
+    environment:
+      name: production
+      url: https://t.me/changyp99_news_bot
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
