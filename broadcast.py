@@ -150,9 +150,9 @@ def _send_one_news(bot, chat_id, news):
     if not image_url:
         return False  # 無圖不發送
 
-    keyboard = [[InlineKeyboardButton("🌐 直接開啟原文", url=link)]]
+    keyboard = [[InlineKeyboardButton("🔗 直接開啟", url=link)]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    caption=f"📌 {source}\n\n🔹 {title}"
+    caption=f"📌 {source}\n\n🔹 {title}\n\n🔗 {link}"
     bot.send_photo(
         chat_id=chat_id,
         photo=image_url,
